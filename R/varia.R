@@ -5,6 +5,8 @@
 #' @param xlsx_name character string specyfying name of exported .xlsx
 #'
 #' @import xlsx
+#' 
+#' @export
 #'
 
 export_mass_xlsx <- function(list_of_dfs, xlsx_name) {

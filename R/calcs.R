@@ -1,10 +1,3 @@
-#### libraries ####
-
-library(tidyverse)
-library(psych)
-library(lavaan)
-library(officer)
-
 #### functions ####
 #' Calc Cronbach's alpha for multiple scales
 #'
@@ -21,8 +14,10 @@ library(officer)
 #' alphas and lower and upper CI for alphas
 #'
 #' @import tidyverse
-#' @import psych
-#' @import cocron
+#' @importFrom psych alpha
+#' @importFrom cocron cronbach.alpha.CI
+#' 
+#' @export
 #'
 
 calc_alphas_for_scales <- function(data, scales, values = c(1,5), conf.level = 0.95) {
@@ -94,6 +89,8 @@ calc_alphas_for_scales <- function(data, scales, values = c(1,5), conf.level = 0
 #' @return data.frame containing the summarized scales or mean of items in scales
 #'
 #' @import tidyverse
+#' 
+#' @export
 #'
 
 calc_items_to_scale <- function(data, scales, values = c(1,5), mean = TRUE, na.rm = TRUE) {
@@ -150,6 +147,8 @@ calc_items_to_scale <- function(data, scales, values = c(1,5), mean = TRUE, na.r
 #' maximum 2
 #'
 #' @import tidyverse
+#' 
+#' @export
 #'
 
 summarize_descriptives <- function(data, var, grouping.var) {
@@ -220,6 +219,8 @@ summarize_descriptives <- function(data, var, grouping.var) {
 #' @import broom
 #' @import moments
 #' @import nortest
+#' 
+#' @export
 #'
 
 calc_scale_desc <- function(data, Vars.list, grouping = "no grouping", not.normal.list = FALSE, normal.list = FALSE, na.rm = FALSE, normality_test = "shapiro") {

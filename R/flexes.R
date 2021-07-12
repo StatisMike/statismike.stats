@@ -16,6 +16,8 @@
 #' @import tidyverse
 #' @import rstatix
 #' @import flextable
+#' 
+#' @export
 #'
 
 flex_wilcox <- function(data,
@@ -214,6 +216,8 @@ flex_wilcox <- function(data,
 #' @import flextable
 #' @import psych
 #' @import nortest
+#' 
+#' @export
 #'
 
 flex_corr <- function(data,
@@ -609,10 +613,12 @@ flex_corr <- function(data,
 #' @param h_lines if there should be horizontal lines between variables
 #'
 #' @import dplyr
-#' @import car
+#' @importFrom car leveneTest
 #' @import broom
 #' @import rstatix
 #' @import flextable
+#' 
+#' @export
 #'
 
 flex_t_test <- function(data,
@@ -905,6 +911,8 @@ flex_t_test <- function(data,
 #' @import broom
 #' @import flextable
 #' @import tidyverse
+#' 
+#' @export
 #'
 
 flex_reg <- function(data,
